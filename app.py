@@ -30,7 +30,7 @@ def search():
     search_results = [] 
     for product in results:
         search_results.append({
-            "id": str(product["id"]),
+            "id": str(product["_id"]),
             "name": product["name"],
             "production_year": product["production_year"],
             "price": product["price"],
