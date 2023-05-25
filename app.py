@@ -171,7 +171,7 @@ def crawler():
                 if i % 4 == 2:
                     results.append(cell.text)
                 i = i + 1
-        driv
+        
         return results, 200
     except Exception as e:
         return "BAD REQUEST", 400
