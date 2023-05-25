@@ -1,11 +1,16 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>WIS Project - Products</title>
-    <link rel="stylesheet" href="products.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="products.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <!-- BEGIN CODE HERE -->
@@ -15,100 +20,153 @@
       </a>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto mb-1 pe-3">
-			<li class="nav-item">
-            <a href="homepage.html" class="nav-link px-3 .text-primary text-primary">Home</a>
+          <li class="nav-item">
+            <a
+              href="homepage.html"
+              class="nav-link px-3 .text-primary text-primary"
+              >Home</a
+            >
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link bg-primary rounded px-3 .text-light text-light">Products</a>
+            <a
+              href="#"
+              class="nav-link bg-primary rounded px-3 .text-light text-light"
+              >Products</a
+            >
           </li>
         </ul>
       </div>
     </nav>
-	
+    <hr />
+
     <div style="width: 1200px weight=400px" class="container p-5">
       <div class="row">
         <div class="col-sm-6">
-			<div class="input-group mb-3">
-				 <label for="search" class="form-label p-1">Search a product: </label>
-				<input type="text" class="form-control" placeholder="input" aria-label="input" aria-describedby="button-addon2">
-				<button class="btn btn-primary " type="button" id="button-addon2">Search</button>
-			</div>
-		</div>
-	</div>
+          <div class="input-group mb-3">
+            <label for="search" class="form-label p-1"
+              >Search a product:
+            </label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="input"
+              aria-label="input"
+              id="search_text_field"
+              aria-describedby="button-addon2"
+            />
+            <button class="btn btn-primary" type="button" id="button-addon2">
+              Search
+            </button>
+          </div>
+        </div>
+      </div>
 
-    <div class="container p-5">
-	<h5 class="p-1 fw-bold">Results </h5>
-	  <table class="table table-bordered">
-	  <thead>
-		<tr>
-		  <th scope="col">ID</th>
-		  <th scope="col">Name</th>
-		  <th scope="col">Production year</th>
-		  <th scope="col">Price</th>
-		  <th scope="col">Color</th>
-		  <th scope="col">Size</th>
-		</tr>
-	  </thead>
-	  <tbody>
-		<tr>
-		  <th scope="row"></th>
-		  <td></td>
-		  <td></td>
-		  <td></td>
-		  <td></td>
-		  <td></td>
-		</tr>
-	  </tbody>
-	  </table>
-	</div>
-	
-	<div class="container p-5">
-		<h5 class="p-1 fw-bold">Add a product: </h5>
-		<div class="row">
-			<div class="col-sm-6 align-self-start">
-				<div class="row mb-3">
-					<label class="col-sm-2 col-form-label col-form-label-sm">Name</label>
-					<div class="col-sm-10">
-					<input type="name" class="form-control form-control-sm" id="name" >
-					</div>
-				</div>
-				<div class="row mb-3">
-					<label  class="col-sm-2 col-form-label col-form-label-sm">Production year</label>
-					<div class="col-sm-10">
-					<input type="production" class="form-control form-control-sm" id="production" >
-					</div>
-				</div>
-				<div class="row mb-3">
-					<label class="col-sm-2 col-form-label col-form-label-sm">Price</label>
-					<div class="col-sm-10">
-					<input type="price" class="form-control form-control-sm" id="price" >
-					</div>
-				</div>
-				<div class="row mb-3">
-					<label class="col-sm-2 col-form-label col-form-label-sm">Color</label>
-					<div class="col-sm-10">
-					<input type="clr" class="form-control form-control-sm" id="color" >
-					</div>
-				</div>
-				<div class="row mb-3">
-					<label class="col-sm-2 col-form-label col-form-label-sm">Size</label>
-					<div class="col-sm-10">
-					<input type="size" class="form-control form-control-sm" id="size" >
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 align-self-end">
-				<button type="button" class="btn btn-primary float-end">Save</button>
-			</div>
-		</div>
-	
-      </div>    
+      <div class="container p-5">
+        <h5 class="p-1 fw-bold">Results</h5>
+        <table id="table-search-results" class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Name</th>
+              <th scope="col">Production year</th>
+              <th scope="col">Price</th>
+              <th scope="col">Color</th>
+              <th scope="col">Size</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="container p-5">
+        <h5 class="p-1 fw-bold">Add a product:</h5>
+        <div class="row">
+          <div class="col-sm-6 align-self-start">
+            <div class="row mb-3">
+              <label class="col-sm-2 col-form-label col-form-label-sm"
+                >Name</label
+              >
+              <div class="col-sm-10">
+                <input
+                  type="name"
+                  class="form-control form-control-sm"
+                  id="name"
+                />
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label class="col-sm-2 col-form-label col-form-label-sm"
+                >Production year</label
+              >
+              <div class="col-sm-10">
+                <input
+                  type="production"
+                  class="form-control form-control-sm"
+                  id="production"
+                />
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label class="col-sm-2 col-form-label col-form-label-sm"
+                >Price</label
+              >
+              <div class="col-sm-10">
+                <input
+                  type="price"
+                  class="form-control form-control-sm"
+                  id="price"
+                />
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label class="col-sm-2 col-form-label col-form-label-sm"
+                >Color</label
+              >
+              <div class="col-sm-10">
+                <input
+                  type="clr"
+                  class="form-control form-control-sm"
+                  id="color"
+                />
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label class="col-sm-2 col-form-label col-form-label-sm"
+                >Size</label
+              >
+              <div class="col-sm-10">
+                <input
+                  type="size"
+                  class="form-control form-control-sm"
+                  id="size"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 align-self-end">
+            <button
+              type="button"
+              id="save-button"
+              class="btn btn-primary float-end"
+            >
+              Save
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
-    <div style="height: 100px" class="text-center">
-      <h4>Full Name - AEM</h4>
-    </div>
+    <hr />
+    <dev1>
+      <center>Full Name - AEM</center>
+    </dev1>
     <!-- END CODE HERE -->
     <script src="products.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
